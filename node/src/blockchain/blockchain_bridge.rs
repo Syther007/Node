@@ -1425,7 +1425,6 @@ mod tests {
             Box::new(blockchain_interface_mock),
             Box::new(persistent_config),
             false,
-            Some(make_wallet("consuming")),
         );
         let addr = subject.start();
         let subject_subs = BlockchainBridge::make_subs_from(&addr);
@@ -1515,7 +1514,6 @@ mod tests {
             Box::new(blockchain_interface),
             Box::new(persistent_config),
             false,
-            Some(make_wallet("consuming")),
         );
         let addr = subject.start();
         let subject_subs = BlockchainBridge::make_subs_from(&addr);
@@ -1763,7 +1761,6 @@ mod tests {
             Box::new(blockchain_interface),
             Box::new(persistent_config),
             false,
-            None, //not needed in this test
         );
         let retrieve_transactions = RetrieveTransactions {
             recipient: make_wallet("somewallet"),
