@@ -1018,7 +1018,7 @@ impl MASQRealNode {
 
         args.push("test_node_image");
         let mut command = Command::new("docker", Command::strings(args));
-        command.stdout_or_stderr()?;
+        println!("{}", command.stdout_or_stderr()?);
         Ok(())
     }
 
